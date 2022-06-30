@@ -1,0 +1,76 @@
+
+
+.App {
+  text-align: center;
+  color: #3c4043;
+  font-family: arial,sans-serif;
+  font-size: 14px;
+  margin: 0 10% 0 10%;
+  word-break: break-all;
+}
+
+
+.App-header {
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  align-items: stretch;
+  justify-content: center;
+
+}
+
+button {
+    background-color: #e3e7eb;
+    border: 1px solid #c7c2c2;
+    border-radius: 4px;
+    color: #3c4043;
+    cursor: pointer;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    height: 36px;
+    line-height: 27px;
+    min-width: 54px;
+    padding: 0 16px;
+    text-align: center;
+
+}
+
+input {
+  background-color: #ffffff;
+  border: 1px solid #c7c2c2;
+  border-radius: 4px;
+  color: #3c4043;
+  cursor: pointer;
+  font-family: arial,sans-serif;
+  font-size: 14px;
+  height: 36px;
+  line-height: 27px;
+  min-width: 54px;
+  padding: 0 16px;
+  text-align: center;
+}
+
+.del-button {
+  background-color: #e3e7eb;
+  border: 1px solid #c7c2c2;
+  border-radius: 4px;
+  color: #3c4043;
+  cursor: pointer;
+  height: 36px;
+  width: 10px;
+  text-align: center;
+
+}
+
+.chatbox {
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+.message {
+  border: solid black 1px;
+  padding: 2rem;
+  border-radius: 25px;
+  background-color: #c7c2c2;
+}
