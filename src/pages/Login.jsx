@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/react-in-jsx-scope */
 import { useRecoilState } from "recoil";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -15,7 +17,7 @@ function Login() {
 
   useEffect(() => {
     socket.on("connect", () => {
-      console.log(`Connected with server`);
+      console.log("Connected with server");
       setYourSocketId(socket.id);
     });
     socket.on("loginResponse", (data) => {
@@ -37,6 +39,7 @@ function Login() {
   }
 
   return (
+    // eslint-disable-next-line react/react-in-jsx-scope
     <div className="App">
       <header className="App-header">
         <h2>Login</h2>

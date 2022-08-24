@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { useRecoilState } from "recoil";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";

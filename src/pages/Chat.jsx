@@ -1,14 +1,15 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { useRecoilState } from "recoil";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import InputEmoji from "react-input-emoji";
 import "../style/App.css";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+
 import socket from "../socket";
 import { username, token, socketId, chatType } from "../recoil/atom";
 
 function Chat() {
-  let { name } = useParams();
+  const { name } = useParams();
   const navigate = useNavigate();
   const [yourToken, setYourToken] = useRecoilState(token);
   const [yourUsername, setYourUsername] = useRecoilState(username);
