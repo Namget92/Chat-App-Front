@@ -26,13 +26,13 @@ function ChatRoomPortal() {
 
   useEffect(() => {
     socket.on("getAllUsers", (data) => {
-      console.log(data);
+      console.log(data.success);
       setContacts(data.success);
       setResponse(data);
     });
 
     socket.on("getAllChats", (data) => {
-      console.log(data);
+      console.log(data.success);
       setChats(data.success);
       setChatsResponse(data);
     });
