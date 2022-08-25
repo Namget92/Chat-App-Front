@@ -16,6 +16,7 @@ function CreateAccount() {
   useEffect(() => {
     socket.on("createAccountResponse", (data) => {
       setResponse(data);
+      console.log(data);
     });
   }, []);
 
