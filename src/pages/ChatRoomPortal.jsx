@@ -113,12 +113,6 @@ function ChatRoomPortal() {
   if (contacts == [] || chats == []) {
     return <h1>Loading...</h1>;
   }
-  if (contacts == null || chats == null) {
-    return <h1>Loading...</h1>;
-  }
-  if (contacts == undefined || chats == undefined) {
-    return <h1>Loading...</h1>;
-  }
 
   return (
     <div className="App">
