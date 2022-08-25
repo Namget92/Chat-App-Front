@@ -30,31 +30,38 @@ function ChatRoomPortal() {
       setContacts(data.success);
       setResponse(data);
     });
+
     socket.on("getAllChats", (data) => {
       console.log(data);
       setChats(data.success);
       setChatsResponse(data);
     });
+
     socket.on("chatDeleted", (sender, receiver) => {
       updateAll();
       console.log(`${sender} deleted room - ${receiver}`);
     });
+
     socket.on("badToken", (data) => {
       console.log(data);
     });
+
     socket.on("joined_room", (sender, receiver) => {
       navigate(`/chat/${receiver}`);
     });
+
     socket.on("joined_DM_room", (sender, receiver) => {
       const items = [`${receiver}`, `${sender}`];
       const order = items.sort();
       navigate(`/chatDM/${order[0]} & ${order[1]}`);
     });
+
     socket.on("createChat", (sender, receiver) => {
       updateAll();
       setType("group");
       console.log(`${sender} created room - ${receiver}`);
     });
+
     socket.on("updateUsers", () => {
       updateAll();
     });
@@ -102,9 +109,17 @@ function ChatRoomPortal() {
     socket.emit("logoff", yourUsername);
     window.location.reload();
   }
+
   if (contacts == [] || chats == []) {
     return <h1>Loading...</h1>;
   }
+  if (contacts == null || chats == null) {
+    return <h1>Loading...</h1>;
+  }
+  if (contacts == undefined || chats == undefined) {
+    return <h1>Loading...</h1>;
+  }
+
   return (
     <div className="App">
       <header className="App-header">
